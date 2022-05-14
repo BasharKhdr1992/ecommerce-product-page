@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, { useContext } from 'react';
+import Navbar from './components/Navbar';
+import Product from './components/product';
 import './App.css';
+import { ModalContext } from './context/ModalContext';
+import LightBox from './components/modals/LightBox';
+import MobileNavbarModal from './components/modals/MobileNavbarModal';
 
-function App() {
+const App = () => {
+  const { modals } = useContext(ModalContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      {modals.lightboxModal && <LightBox />}
+      {modals.mobileNavbarModal && <MobileNavbarModal />}
+      <Navbar />
+      <Product />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,37 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-prod-img {
+  border-radius: 0.5rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.name {
+  color: hsl(219, 9%, 45%);
+}
+
+.cost {
+  color: hsl(219, 9%, 45%);
+}
+
+.total-cost {
+  margin-left: 1.5rem;
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.icon-delete {
+  width: 1rem;
+  height: 1.5rem;
+  align-self: center;
+  cursor: pointer;
+}
