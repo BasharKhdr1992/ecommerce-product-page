@@ -25,22 +25,22 @@ const Index = () => {
           onClick={openMobileNavbar}
           src={assets.hamburger}
           alt={'icon hamburger'}
-          className="img-navlink hamburger mobile"
+          className="img-navlink hamburger mr mobile"
         />
-        <div className="img-navlink logo">
+        <div className="img-navlink logo mr">
           <img src={logo} alt="sneakers" />
         </div>
-      </div>
-      <div className="collapse">
-        <button className="navlink">Collections</button>
-        <button className="navlink">Men</button>
-        <button className="navlink">Women</button>
-        <button className="navlink">About</button>
-        <button className="navlink">Contact</button>
+        <div className="collapse">
+          <button className="navlink">Collections</button>
+          <button className="navlink">Men</button>
+          <button className="navlink">Women</button>
+          <button className="navlink">About</button>
+          <button className="navlink">Contact</button>
+        </div>
       </div>
       <div className="navbar-right">
         <div
-          className="img-navlink cart"
+          className="img-navlink cart mr"
           onClick={() => setIsDropdown(!isDropdown)}
         >
           <img src={iconCart} alt="cart" />

@@ -1,25 +1,39 @@
 .navbar {
   display: flex;
-  height: 5rem;
+  height: max-content;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.1rem solid hsl(219, 9%, 45%);
+  border-bottom: 0.1rem solid hsla(219, 9%, 45%, 0.2);
+}
+
+.navbar-left {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+.collapse {
+  height: inherit;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 30%;
   justify-content: flex-end;
 }
 
 .navlink {
   background: transparent;
   border: none;
-  padding: 0.7rem 1.6rem 2.2rem 1.6rem;
-  font-size: 1.2rem;
+  width: 5.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.8rem;
+  border-bottom: 0.4rem solid hsla(26, 100%, 55%, 0);
+  font-size: 1rem;
   color: hsl(219, 9%, 45%);
   height: 100%;
+  transition: all 0.4s ease-in;
 }
 
 .navlink,
@@ -28,16 +42,19 @@
 }
 
 .img-navlink {
-  margin: 0.7rem 2rem 2.2rem 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.mr {
+  margin-right: 1.5rem;
 }
 
 .navlink:hover {
   color: black;
-  border-bottom: 0.4rem solid hsl(26, 100%, 55%);
+  border-bottom: 0.4rem solid hsla(26, 100%, 55%, 1);
 }
 
 .cart {
-  margin-right: 1rem;
   position: relative;
 }
 
@@ -56,11 +73,12 @@
 }
 
 .avatar img {
+  border: 0.2rem solid hsla(26, 100%, 55%, 0);
   width: 100%;
 }
 
 .avatar img:hover {
-  border: 0.2rem solid hsl(26, 100%, 55%);
+  border: 0.2rem solid hsla(26, 100%, 55%, 1);
   border-radius: 50%;
 }
 
@@ -74,13 +92,14 @@
 }
 
 .hamburger {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 @media screen and (max-width: 1100px) {
   .navbar {
-    padding-top: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    height: max-content;
   }
 
   .collapse {

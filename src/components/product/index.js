@@ -42,17 +42,17 @@ const Index = () => {
         <div className="add-to-cart">
           <div className="plus-minus-container">
             <button
-              className="plus"
-              onClick={() => setCount((prev) => prev + 1)}
-            >
-              <img src={assets.plus} alt="plus icon" />
-            </button>
-            <div className="count">{count}</div>
-            <button
               className="minus"
               onClick={() => setCount((prev) => Math.max(0, prev - 1))}
             >
               <img src={assets.minus} alt="minus icon" />
+            </button>
+            <div className="count">{count}</div>
+            <button
+              className="plus"
+              onClick={() => setCount((prev) => prev + 1)}
+            >
+              <img src={assets.plus} alt="plus icon" />
             </button>
           </div>
           <Button type={'btn-primary'} onClick={handleAddToCart}>
